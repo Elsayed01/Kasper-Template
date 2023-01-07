@@ -797,4 +797,98 @@ header .container nav .nav-form i {
   }
 }
 
-/* Start About us */
+/* Start Stats */
+
+.stats {
+
+  background-image: url(../images/About-us-Background.jpg);
+  background-size: cover;
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  position: relative;
+}
+
+.stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 70%);
+}
+
+.stats .container {
+
+  background-color: var(--transparent-color);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats .container .stat-box {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+
+  .stats .container .stat-box {
+    flex-basis: 100%;
+    padding: 10px;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .stats .container .stat-box {
+
+    flex-basis: 50%;
+  }
+
+}
+
+@media (min-width: 992px) {
+
+  .stats .container .stat-box {
+
+    flex-basis: 25%;
+  }
+
+}
+
+
+
+.stats .container .stat-box i {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.stats .container .stat-box h3 {
+  color: white;
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.stats .container .stat-box p {
+
+  font-size: 13px;
+  color: white;
+  line-height: 2;
+}
+
+/* End Stats */
+
+
+/* End About us */
