@@ -760,3 +760,41 @@ header .container nav .nav-form i {
 }
 
 /* End Portfolio */
+
+/* Start About us */
+
+.about {
+
+  padding-top: var(--main-section-padding);
+  overflow: hidden;
+  text-align: center;
+}
+
+.about img {
+
+  max-width: 100%;
+  position: relative;
+  bottom: -120px;
+  margin-top: -120px;
+  padding-right: 40px;
+}
+
+@media (max-width: 767px) {
+
+  .about img {
+
+    bottom: -60px;
+    margin-top: -60px;
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .about img {
+
+    padding-right: 25px;
+  }
+}
+
+/* Start About us */
