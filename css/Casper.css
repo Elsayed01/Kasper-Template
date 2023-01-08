@@ -387,6 +387,12 @@ header .container nav .nav-form i {
   width: 10px;
   border: 1px solid white;
   border-radius: 50%;
+  transition: var(--transition-time);
+}
+
+.landing .landing-bullets span:hover {
+  transform: scale(1.3);
+
 }
 
 .landing .landing-bullets span:nth-child(2) {
@@ -867,12 +873,16 @@ header .container nav .nav-form i {
 }
 
 .about img {
-
   max-width: 100%;
   position: relative;
   bottom: -120px;
   margin-top: -120px;
   padding-right: 40px;
+  transition: var(--transition-time);
+}
+
+.about img:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 767px) {
@@ -1170,6 +1180,11 @@ header .container nav .nav-form i {
   height: 10px;
   border: 1px solid #777;
   border-radius: 50%;
+  transition: var(--transition-time);
+}
+
+.overview .testimonials .testimonials-content .bullets span:hover {
+  transform: scale(1.3);
 }
 
 .overview .testimonials .testimonials-content .bullets span.active {
@@ -1499,6 +1514,7 @@ header .container nav .nav-form i {
   position: relative;
   overflow: hidden;
   z-index: 0;
+  border-radius: 6px;
 }
 
 .pricing .container .pricing-content .deals-container .deal .deal-button button::before {
@@ -1906,6 +1922,11 @@ footer .container {
 
 footer .container img {
   margin-bottom: 15px;
+  transition: var(--transition-time);
+}
+
+footer .container img:hover {
+  transform: scale(1.1);
 }
 
 
