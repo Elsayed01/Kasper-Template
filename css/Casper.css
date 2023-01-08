@@ -1352,3 +1352,384 @@ header .container nav .nav-form i {
 /* End Quote */
 
 /* End About us */
+
+/* Start Pricing */
+
+.pricing .container {
+
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.pricing .container .pricing-content {
+
+  position: relative;
+}
+
+.pricing .container .pricing-content .deals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+
+
+.pricing .container .pricing-content .deals-container .deal {
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 20%;
+
+}
+
+@media (max-width:991px) {
+
+  .pricing .container .pricing-content .deals-container .deal {
+
+    flex-basis: 40%;
+    margin-bottom: 60px;
+  }
+
+}
+
+@media (max-width:767px) {
+
+  .pricing .container .pricing-content .deals-container .deal {
+
+    flex-basis: 80%;
+    margin-bottom: 20px;
+  }
+
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-head {
+
+  padding: 20px 50px;
+  border-top: 1px solid var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width:991px) {
+
+  .pricing .container .pricing-content .deals-container .deal .deal-head {
+
+    width: 80%;
+  }
+
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-head p {
+  text-transform: uppercase;
+  line-height: 2;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-head h3 {
+  position: relative;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-head h3 span:nth-of-type(1) {
+
+  font-size: 16px;
+  position: absolute;
+  top: -5px;
+  left: -15px;
+}
+
+
+.pricing .container .pricing-content .deals-container .deal .deal-head h3 span:nth-of-type(2) {
+  font-size: 11px;
+  position: absolute;
+  bottom: 0;
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 10px;
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-body li {
+  padding: 25px;
+  position: relative;
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-body li:not(:nth-last-child(1))::after {
+
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background-color: var(--main-color);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-button {
+
+  border-top: 1px solid var(--main-color);
+  width: 100%;
+  text-align: center;
+  padding: 30px 25px;
+}
+
+
+.pricing .container .pricing-content .deals-container .deal .deal-button button {
+
+  padding: 10px 20px;
+  border: 1px solid var(--main-color);
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-button button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-button button:hover::before {
+
+  left: 0;
+  z-index: -1;
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-button button span {
+  color: #262626;
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.pricing .container .pricing-content .deals-container .deal .deal-button button:hover span {
+
+  color: #262626;
+}
+
+
+.pricing .container .pricing-content p {
+
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.pricing .container .pricing-content button {
+  position: relative;
+  padding: 15px 30px;
+  margin: 30px auto 50px;
+  display: block;
+  outline: none;
+  border: 1px solid #262626;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.pricing .container .pricing-content button:hover {
+
+  border: none;
+}
+
+.pricing .container .pricing-content button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  transition: 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.pricing .container .pricing-content button:hover::before {
+
+  left: 0;
+  z-index: -1;
+}
+
+.pricing .container .pricing-content button span {
+  color: #262626;
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.pricing .container .pricing-content button:hover span {
+
+  color: #fff;
+}
+
+.subscribe {
+
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+  position: relative;
+  background-image: url(../images/Contact-us-Background.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.subscribe::before {
+
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 80%);
+
+}
+
+.subscribe .container {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 991px) {
+
+  .subscribe .container {
+
+    flex-direction: column;
+  }
+}
+
+.subscribe .container .form,
+.subscribe .container .text {
+
+  flex-basis: 48%;
+}
+
+.subscribe .form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.subscribe .form i {
+  position: absolute;
+  left: 15px;
+  color: white;
+}
+
+.subscribe .form input {
+  height: 45px;
+  width: 100%;
+  padding: 10px 0 10px 50px;
+  background-color: transparent;
+  border: 1px solid white;
+  caret-color: var(--main-color);
+  color: white;
+}
+
+.subscribe .form input:focus {
+
+  outline: none;
+}
+
+.subscribe .form input::-webkit-input-placeholder {
+
+  text-transform: uppercase;
+  font-size: 15px;
+  color: white;
+  font-weight: 400;
+}
+
+.subscribe .form input::-moz-placeholder {
+
+  text-transform: uppercase;
+}
+
+.subscribe .form input:-ms-input-placeholder {
+
+  text-transform: uppercase;
+}
+
+.subscribe .form input::-ms-input-placeholder {
+
+  text-transform: uppercase;
+}
+
+.subscribe .form input::placeholder {
+
+  text-transform: uppercase;
+}
+
+.subscribe .form button {
+  height: 45px;
+  width: 30%;
+  padding: 10px 25px;
+  background-color: var(--main-color);
+  color: white;
+  border: 1px solid white;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe .text {
+  position: relative;
+  color: white;
+}
+
+@media (max-width: 991px) {
+
+  .subscribe .form {
+
+    margin-bottom: 30px;
+    width: 80%;
+  }
+
+  .subscribe .text {
+    text-align: center;
+    max-width: 80%;
+    font-size: 15px;
+  }
+}
+
+.subscribe .text p {
+  font-size: 13px;
+}
+
+/* End Pricing */
+
+/* Start Contact us */
+
+
+
+/* End Contact us */
