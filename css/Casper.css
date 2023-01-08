@@ -1275,4 +1275,80 @@ header .container nav .nav-form i {
 
 /* End Overview */
 
+/* Start Quote */
+
+.quote {
+  position: relative;
+  background-image: url(../images/Quote-Background.jpg);
+  background-size: cover;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote::before {
+
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 90%);
+  top: 0;
+  left: 0;
+}
+
+.quote .text {
+  position: relative;
+  text-align: center;
+  height: 30%;
+  max-width: 58%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+
+  .quote .text {
+
+    max-width: 86%;
+  }
+
+}
+
+.quote .text q {
+
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.quote .text q::after {
+
+  font-family: "Font Awesome 5 free";
+  content: "\f10e";
+  font-weight: 900;
+  margin-left: 5px;
+  position: relative;
+  bottom: 6px;
+}
+
+.quote .text q::before {
+
+  font-family: "Font Awesome 5 free";
+  content: "\f10d";
+  font-weight: 900;
+  margin-right: 5px;
+  position: relative;
+  top: -6px;
+}
+
+.quote .text p {
+  font-size: 12px;
+}
+
+/* End Quote */
+
 /* End About us */
