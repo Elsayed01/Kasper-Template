@@ -261,7 +261,15 @@ header .container nav .nav-form {
   height: 30px;
   position: relative;
   border-left: 1px solid white;
-  margin-left: 30px;
+  margin-left: 65px;
+}
+
+@media (max-width: 767px) {
+
+  header .container nav .nav-form {
+
+    margin-left: 30px;
+  }
 }
 
 header .container nav .nav-form i {
@@ -1381,7 +1389,8 @@ header .container nav .nav-form i {
   flex-direction: column;
   align-items: center;
   flex-basis: 20%;
-
+  background-color: #fcfcfc85;
+  box-shadow: 2px 2px 0 0 #c3cfc340;
 }
 
 @media (max-width:991px) {
@@ -1398,7 +1407,7 @@ header .container nav .nav-form i {
 
   .pricing .container .pricing-content .deals-container .deal {
 
-    flex-basis: 80%;
+    flex-basis: 60%;
     margin-bottom: 20px;
   }
 
@@ -1416,14 +1425,6 @@ header .container nav .nav-form i {
   align-items: center;
 }
 
-@media (max-width:991px) {
-
-  .pricing .container .pricing-content .deals-container .deal .deal-head {
-
-    width: 80%;
-  }
-
-}
 
 .pricing .container .pricing-content .deals-container .deal .deal-head p {
   text-transform: uppercase;
@@ -1700,6 +1701,7 @@ header .container nav .nav-form i {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-left: transparent;
 }
 
 .subscribe .text {
@@ -1730,6 +1732,149 @@ header .container nav .nav-form i {
 
 /* Start Contact us */
 
+.contact {
 
+  padding-top: var(--main-section-padding);
+  padding-bottom: var(--main-section-padding);
+}
+
+.contact .container .contact-content {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+
+  .contact .container .contact-content {
+    flex-direction: column;
+  }
+}
+
+.contact .container .contact-content form {
+  flex-basis: 70%;
+}
+
+.contact .container .contact-content form .field {
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.contact .container .contact-content form .field:focus {
+
+  outline: none;
+}
+
+.contact .container .contact-content form .field::-webkit-input-placeholder {
+
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact .container .contact-content form .field::-moz-placeholder {
+
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact .container .contact-content form .field:-ms-input-placeholder {
+
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact .container .contact-content form .field::-ms-input-placeholder {
+
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact .container .contact-content form .field::placeholder {
+
+  color: black;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact .container .contact-content form textarea.field {
+  height: 200px;
+  resize: none;
+}
+
+
+.contact .container .contact-content form button {
+  display: flex;
+  margin-left: auto;
+  padding: 15px 30px;
+  background-color: var(--main-color);
+  border: none;
+  color: white;
+  font-size: 12px;
+}
+
+
+.contact .container .contact-content .info {
+  flex-basis: 25%;
+}
+
+@media (max-width: 767px) {
+
+  .contact .container .contact-content .info {
+    order: -1;
+    text-align: center;
+  }
+}
+
+.contact .container .contact-content .info h4 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+@media (max-width: 767px) {
+
+  .contact .container .contact-content .info h4 {
+    margin-bottom: 20px;
+  }
+}
+
+.contact .container .contact-content .info span {
+  display: block;
+  line-height: 2;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.contact .container .contact-content .info h4:nth-of-type(2) {
+  margin-top: 70px;
+}
+
+@media (max-width: 767px) {
+
+  .contact .container .contact-content .info h4:nth-of-type(2) {
+    margin-top: 40px;
+  }
+}
+
+.contact .container .contact-content .info address {
+  line-height: 1.8;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+@media (max-width: 767px) {
+
+  .contact .container .contact-content .info address {
+    margin-bottom: 40px;
+  }
+}
 
 /* End Contact us */
