@@ -12,6 +12,7 @@
           "aspect-ratio"
         ]
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   }
 }
