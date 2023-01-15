@@ -287,12 +287,25 @@ header .container nav .nav-form i {
 /* Start Landing */
 
 .landing {
-
-  background-image: url(../images/landing.png);
-  background-size: cover;
-  background-color: black;
   min-height: 100vh;
   position: relative;
+}
+
+.landing img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: var(--transition-time);
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.landing img.active {
+
+  opacity: 1;
 }
 
 .landing .overlay {
