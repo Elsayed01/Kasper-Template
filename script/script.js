@@ -97,7 +97,11 @@ function checker() {
 
 /* Start Portfolio filtering */
 
-const categories = document.querySelectorAll(".shuffle-menu li");
+const categories = Array.from(
+  document
+    .getElementById("shuffle-menu")
+    .getElementsByClassName("shuffle-category")
+);
 
 const imgs = document
   .getElementById("imgs-container")
@@ -127,6 +131,8 @@ function filterCategories() {
       filteredImages.forEach((img) => {
         img.style.display = "block";
       });
+
+      seeMore();
     });
   });
 }
@@ -134,5 +140,54 @@ function filterCategories() {
 filterCategories();
 
 /* End Portfolio filtering */
+
+/* Start see more functionality */
+
+const seeMoreButton = document.getElementById("see-more");
+
+function seeMore() {
+  let currentItem = 8;
+  let currentItemReferenced = 8;
+
+  categories.forEach((category) => {
+    if (category.classList.contains("active")) {
+      let imgs = [
+        ...document.querySelectorAll(`.${category.dataset.category}`),
+      ];
+
+      if (imgs.length > currentItem) {
+        for (let i = currentItem; i < imgs.length; i++) {
+          imgs[i].style.display = "none";
+        }
+        seeMoreButton.style.display = "block";
+      } else {
+        seeMoreButton.style.display = "none";
+      }
+
+      if (seeMoreButton.style.display !== "none") {
+        seeMoreButton.addEventListener("click", (e) => {
+          for (let i = currentItem; i < currentItem + 4; i++) {
+            if (imgs[i]) {
+              imgs[i].style.display = "block";
+              currentItemReferenced++;
+            } else {
+              break;
+            }
+          }
+
+          currentItem = currentItemReferenced;
+
+          if (currentItem >= imgs.length) {
+            seeMoreButton.style.display = "none";
+          }
+        });
+      }
+    }
+  });
+}
+
+seeMore();
+
+/* End see more functionality */
 
 /* --------------------------------------------------------------- */

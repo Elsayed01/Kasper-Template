@@ -153,12 +153,14 @@
           Mauris blandit aliquet elit, eget tincidunt.
         </p>
       </div>
-      <ul class="shuffle-menu">
-        <li class="active" data-category="all">all</li>
-        <li data-category="app">app</li>
-        <li data-category="photography">photography</li>
-        <li data-category="web">web</li>
-        <li data-category="art">art</li>
+      <ul class="shuffle-menu" id="shuffle-menu">
+        <li class="shuffle-category active" data-category="all">all</li>
+        <li class="shuffle-category" data-category="app">app</li>
+        <li class="shuffle-category" data-category="photography">
+          photography
+        </li>
+        <li class="shuffle-category" data-category="web">web</li>
+        <li class="shuffle-category" data-category="art">art</li>
       </ul>
       <div class="imgs-container" id="imgs-container">
         <div class="img-container all web">
@@ -261,7 +263,7 @@
           </div>
         </div>
       </div>
-      <button type="button"><span>more</span></button>
+      <button type="button" id="see-more"><span>more</span></button>
     </div>
     <div class="video">
       <video autoplay loop muted>
