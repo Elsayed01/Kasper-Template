@@ -371,9 +371,17 @@ header .container nav .nav-form i {
   font-size: 22px;
   cursor: pointer;
   transition: 0.3s;
+  z-index: 10;
 }
 
-.landing .arrow:hover {
+.landing .arrow.disabled {
+
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: auto;
+}
+
+.landing .arrow:hover:not(.disabled) {
   color: black;
 }
 
