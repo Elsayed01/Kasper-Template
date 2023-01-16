@@ -146,15 +146,21 @@ filterCategories();
 const seeMoreButton = document.getElementById("see-more");
 
 function seeMore() {
+  // initial items before showing more
+  // starting index
   let currentItem = 8;
   let currentItemReferenced = 8;
 
   categories.forEach((category) => {
+    // checking which category is selected
     if (category.classList.contains("active")) {
+      // getting the items in the category
       let imgs = [
         ...document.querySelectorAll(`.${category.dataset.category}`),
       ];
 
+      // see if we need to show the see more button
+      // limiting the initial shown items to 8
       if (imgs.length > currentItem) {
         for (let i = currentItem; i < imgs.length; i++) {
           imgs[i].style.display = "none";
@@ -164,8 +170,10 @@ function seeMore() {
         seeMoreButton.style.display = "none";
       }
 
+      // handle the click on the see more button
       if (seeMoreButton.style.display !== "none") {
         seeMoreButton.addEventListener("click", (e) => {
+          // adding 4 by 4 if exist
           for (let i = currentItem; i < currentItem + 4; i++) {
             if (imgs[i]) {
               imgs[i].style.display = "block";
@@ -175,8 +183,10 @@ function seeMore() {
             }
           }
 
+          // where the items index stopped
           currentItem = currentItemReferenced;
 
+          // hide the see more button if all images are shown
           if (currentItem >= imgs.length) {
             seeMoreButton.style.display = "none";
           }
