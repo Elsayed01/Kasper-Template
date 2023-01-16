@@ -90,3 +90,49 @@ function checker() {
 }
 
 /* End Image Slider */
+
+/* --------------------------------------------------------------- */
+
+/* Adding portfolio filtering functionality to the design */
+
+/* Start Portfolio filtering */
+
+const categories = document.querySelectorAll(".shuffle-menu li");
+
+const imgs = document
+  .getElementById("imgs-container")
+  .getElementsByClassName("img-container");
+
+const imgsArray = Array.from(imgs);
+
+// handling the click on categories
+
+function filterCategories() {
+  categories.forEach((cat) => {
+    cat.addEventListener("click", (e) => {
+      categories.forEach((cat) => {
+        cat.classList.remove("active");
+      });
+
+      e.target.classList.add("active");
+
+      imgsArray.forEach((img) => {
+        img.style.display = "none";
+      });
+
+      let filteredImages = Array.from(
+        document.getElementsByClassName(e.target.dataset.category)
+      );
+
+      filteredImages.forEach((img) => {
+        img.style.display = "block";
+      });
+    });
+  });
+}
+
+filterCategories();
+
+/* End Portfolio filtering */
+
+/* --------------------------------------------------------------- */

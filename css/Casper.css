@@ -667,7 +667,7 @@ header .container nav .nav-form i {
 .portfolio .imgs-container .img-container {
   position: relative;
   overflow: hidden;
-
+  transition: var(--transition-time);
 }
 
 .portfolio .imgs-container .img-container .img {
