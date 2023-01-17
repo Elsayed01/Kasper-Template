@@ -1250,25 +1250,7 @@ header .container nav .nav-form i {
   background-color: var(--main-color);
   z-index: 6;
   height: 100%;
-  left: -900px;
-  -webkit-animation: progress 1s 2s forwards;
-  animation: progress 1s 2s forwards;
-}
-
-@-webkit-keyframes progress {
-
-  100% {
-
-    left: 0;
-  }
-}
-
-@keyframes progress {
-
-  100% {
-
-    left: 0;
-  }
+  transition: var(--transition-time);
 }
 
 .overview .skills .skills-content .skill .skill-progress span::after {

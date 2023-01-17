@@ -201,3 +201,24 @@ seeMore();
 /* End see more functionality */
 
 /* --------------------------------------------------------------- */
+
+/* Start showing skills progress on scroll */
+
+const overviewSection = document.querySelector(".overview");
+
+let progressBars = document.querySelectorAll(".skill .skill-progress span");
+
+window.onscroll = () => {
+  if (window.scrollY >= overviewSection.offsetTop - 100) {
+    progressBars.forEach((bar) => {
+      bar.style.width = `${bar.dataset.progress}`;
+    });
+  } else {
+    progressBars.forEach((bar) => {
+      bar.style.width = "0%";
+    });
+  }
+};
+/* End showing skills progress on scroll */
+
+/* --------------------------------------------------------------- */
