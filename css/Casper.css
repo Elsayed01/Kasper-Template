@@ -22,12 +22,17 @@ html {
 body {
 
   font-family: 'Open Sans', sans-serif;
-  overflow-y: scroll;
+  overflow: overlay;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
 
-  display: none;
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
 }
 
 body {
